@@ -48,7 +48,8 @@ span{
     transition: 0.3s ease;
 }
 
-.navbar a:hover{
+.navbar a:hover,
+.navbar a.active{
     color: greenyellow;
     border-bottom: 3px solid greenyellow;
 }
@@ -83,20 +84,21 @@ span{
 }
 
 
-.home-content, .experience-content, .projects-content, .education-content {
+.home-content{
     max-width: 1500px;
 }
 
-.home-content h3, .experience h3, .projects h3, .education h3 {
+.home-content h3{
     font-size: 42px;
 }
-.home-content h1, .experience h1, .projects h1, .education h1 {
+.home-content h1 {
     font-size: 62px;
     line-height: 1.2;
 }
-.home-content p, .experience p, .projects p, .education p {
+.home-content p{
     font-size: 18px;
     margin: 25px 0 30px;
+    text-align: justify;
 }
 .btn-box{
     width: 345px;
@@ -164,16 +166,23 @@ span{
 }
 
 .experience, .projects, .education {
-    display: flex;
+    display: flexbox;
     justify-content: center;
     align-items: center;
-    padding: 12% 8%;
     gap: 10em;
     background: black;
     flex-direction: column;
+    align-content: center;
 }
 
-.about-img img, .experience-img img, .projects-img img, .education-img img {
+.education-content .education-item,.projects-content .project-item, .experience-content .experience-item{
+    display: grid;
+    place-items: center;
+    margin-top: 5%;
+}
+
+
+.about-img img{
     position: relative;
     width: 400px;
     box-shadow: 0 0 25px yellowgreen,
@@ -181,20 +190,39 @@ span{
     border-radius: 50%;
 }
 
+
+.experience-item img, .project-item img, .education-item img {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    align-items: center;
+    margin: 2%;
+}
+
+
 .about-content h2, .experience h2, .projects h2, .education h2 {
     text-align: left;
     color: white;
-    font-size: 42px;
+    font-size: 50px;
 }
 .about-content h3, .experience h3, .projects h3, .education h3 {
     font-size: 62px;
     color: white;
 }
-.about-content p, .experience p, .projects p, .education p {
+.about-content p{
     color: white;
     font-size: 20px;
     margin: 2em 0 3em;
+    text-align: justify;
 }
+
+.experience p, .projects p, .education p {
+    color: white;
+    font-size: 20px;
+    margin: 20px 0;
+    text-align: justify;
+}
+
 
 .contact-form h2{
     text-align: center;
@@ -286,6 +314,8 @@ span{
     font-size: 12px;
     color: white;
 }
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
