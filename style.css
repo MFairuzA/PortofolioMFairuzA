@@ -205,7 +205,7 @@ span{
     color: white;
     font-size: 50px;
 }
-.about-content h3, .experience h3, .projects h3, .education h3 {
+.about-content h3{
     font-size: 62px;
     color: white;
 }
