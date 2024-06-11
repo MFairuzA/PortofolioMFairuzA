@@ -209,6 +209,13 @@ span{
     font-size: 62px;
     color: white;
 }
+
+.experience h3, .projects h3, .education h3 {
+    font-size: 62px;
+    color: white;
+    text-align: center;
+}
+
 .about-content p{
     color: white;
     font-size: 20px;
